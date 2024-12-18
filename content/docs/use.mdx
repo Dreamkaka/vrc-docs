@@ -1,0 +1,34 @@
+---
+title: 使用
+description: 命令用法
+---
+import { Callout } from 'fumadocs-ui/components/callout';
+
+
+
+<Callout title="提示" type="info">
+你可以随时自行在koishi控制台的指令选项内更改触发指令
+</Callout>
+
+
+## 登录相关
+`vrchat.login`: 登录并保存账号
+
+`vrchat.verify`: 验证码输入 （之所以要加验证码命令是怕输入验证码时被其他插件读取到比如说ai插件）
+
+`vrchat.logout`: 登出账号
+
+## 查询账号信息
+`vrchat.me`：查询登录的账号个人信息
+
+`vrchat.friends`: 查询账号的在线好友信息；
+`vrchat.friends -o`: 查询账号的所有好友信息（包括离线的）
+
+## 搜索相关
+`vrchat.usersearch <用户名>`: 搜索用户信息,用户名后面加参数可以控制返回的用户结果数量（不建议超过10个可能会超过限制发不出来信息）
+
+比如说：`vrchat.usersearch xiaohan -l 3` 意思便是搜索并返回名为`xiaohan`的前三个用户
+
+`vrchat.searchworld <世界名>`: 搜索世界相关信息，世界名后加参数可以控制返回的世界结果数量
+
+比如说：`vrchat.searchworld just h party -l 3` 意思便是搜索并返回名为`just h party`的前三个结果
