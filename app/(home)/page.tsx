@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Book, Code, Lightbulb, Rocket } from 'lucide-react'
+import { Book, Code, Rocket } from 'lucide-react'
 
 export default function DocumentationLanding() {
   return (
