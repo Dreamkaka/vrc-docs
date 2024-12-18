@@ -2,7 +2,8 @@ import { createPreset } from 'fumadocs-ui/tailwind-plugin';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
+    darkMode: ['class'],
+    content: [
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './content/**/*.{md,mdx}',
@@ -10,4 +11,15 @@ export default {
     './node_modules/fumadocs-ui/dist/**/*.js',
   ],
   presets: [createPreset()],
+    plugins: [require("tailwindcss-animate")],
+    theme: {
+    	extend: {
+    		borderRadius: {
+    			lg: 'var(--radius)',
+    			md: 'calc(var(--radius) - 2px)',
+    			sm: 'calc(var(--radius) - 4px)'
+    		},
+    		colors: {}
+    	}
+    }
 };
